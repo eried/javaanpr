@@ -113,8 +113,12 @@ public class Intelligence {
         return this.lastProcessDuration;
     }
     
-    public String recognize(CarSnapshot carSnapshot) throws Exception {
-        TimeMeter time = new TimeMeter();
+	public String recognize(CarSnapshot carSnapshot) throws Exception {
+		return recognize(carSnapshot,null,null,0);
+	}
+	
+    public String recognize(CarSnapshot carSnapshot, String defaultIfNull, String defaultIfTimeout, long timeout) throws Exception {
+        TimeMeter time = new TimeMeter(timeout);
         int syntaxAnalysisMode = Intelligence.configurator.getIntProperty("intelligence_syntaxanalysis");
         int skewDetectionMode = Intelligence.configurator.getIntProperty("intelligence_skewdetection");
         
@@ -128,9 +132,8 @@ public class Intelligence {
             Main.rg.insertImage(carSnapshot.renderGraph(), "snapshotgraph",0,0);
             Main.rg.insertImage(carSnapshot.getBiWithAxes(), "snapshot",0,0);
         }
-        
-        for (Band b : carSnapshot.getBands()) { //doporucene 3
 
+        for (Band b : carSnapshot.getBands()) { //doporucene 3
             if (enableReportGeneration) {
                 Main.rg.insertText("<div class='bandtxt'><h4>Band<br></h4>");
                 Main.rg.insertImage(b.getBi(),"bandsmall", 250,30);
@@ -138,9 +141,11 @@ public class Intelligence {
                 Main.rg.insertText("<span>Band height : "+b.getHeight()+" px</span>");
                 Main.rg.insertText("</div>");
             }
-            
+   
             for (Plate plate : b.getPlates()) {//doporucene 3
-
+				if(time.isDue())
+					return defaultIfTimeout;
+			
                 if (enableReportGeneration) {
                     Main.rg.insertText("<div class='platetxt'><h4>Plate<br></h4>");
                     Main.rg.insertImage(plate.getBi(),"platesmall", 120, 30);
@@ -148,7 +153,6 @@ public class Intelligence {
                     Main.rg.insertText("<span>Plate height : "+plate.getHeight()+" px</span>");
                     Main.rg.insertText("</div>");
                 }                
-
                 
                 // SKEW-RELATED
                 Plate notNormalizedCopy = null;
@@ -219,9 +223,8 @@ public class Intelligence {
                     }
                     Main.rg.insertText("</div>");
                 }
-                
+              
                 for (Char chr : chars) chr.normalize();
-                
                 float averageHeight = plate.getAveragePieceHeight(chars);
                 float averageContrast = plate.getAveragePieceContrast(chars);
                 float averageBrightness = plate.getAveragePieceBrightness(chars);
@@ -345,6 +348,6 @@ public class Intelligence {
         
         this.lastProcessDuration = time.getTime();
         //return new String("not available yet ;-)");
-        return null;
+        return defaultIfNull;
     }
 }
