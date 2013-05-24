@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-9">program.imageanalysis.Photo,setBrightness,(IIF)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-8">program.imageanalysis.Photo,getBiWithAxes,()Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-7">program.imageanalysis.Photo,getBi,()Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-6">program.imageanalysis.Photo,getSquare,()I</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-5">program.imageanalysis.Photo,getHeight,()I</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-4">program.imageanalysis.Photo,getWidth,()I</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-3">program.imageanalysis.Photo,clone,()Lprogram/imageanalysis/Photo;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-2">program.imageanalysis.Photo,&lt;init&gt;,(Ljava/lang/String;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-1">program.imageanalysis.Photo,&lt;init&gt;,(Ljava/awt/image/BufferedImage;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-29">program.imageanalysis.Photo,directionLREdgeDetector,(Ljava/awt/image/BufferedImage;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-28">program.imageanalysis.Photo,directionLRTBEdgeDetector,(Ljava/awt/image/BufferedImage;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-0">program.imageanalysis.Photo,&lt;init&gt;,()V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-27">program.imageanalysis.Photo,directionTBEdgeDetector,(Ljava/awt/image/BufferedImage;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-26">program.imageanalysis.Photo,thresholding,(Ljava/awt/image/BufferedImage;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-25">program.imageanalysis.Photo,duplicateBufferedImage,(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-24">program.imageanalysis.Photo,duplicate,()Lprogram/imageanalysis/Photo;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-23">program.imageanalysis.Photo,averageResizeBi,(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-22">program.imageanalysis.Photo,averageResize,(II)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-21">program.imageanalysis.Photo,linearResizeBi,(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-20">program.imageanalysis.Photo,linearResize,(II)V</entry>
+<entry key="presets.cpupart.profiler.settings.instrumentation.root.methods.size">38</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-19">program.imageanalysis.Photo,normalizeBrightness,(F)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-18">program.imageanalysis.Photo,saveImage,(Ljava/lang/String;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-17">program.imageanalysis.Photo,loadImage,(Ljava/lang/String;)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-16">program.imageanalysis.Photo,getHue,(II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-15">program.imageanalysis.Photo,getSaturation,(II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-14">program.imageanalysis.Photo,getBrightness,(II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-13">program.imageanalysis.Photo,getHue,(Ljava/awt/image/BufferedImage;II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-12">program.imageanalysis.Photo,getSaturation,(Ljava/awt/image/BufferedImage;II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-11">program.imageanalysis.Photo,getBrightness,(Ljava/awt/image/BufferedImage;II)F</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-10">program.imageanalysis.Photo,setBrightness,(Ljava/awt/image/BufferedImage;IIF)V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-37">program.imageanalysis.Photo,toVector,()Ljava/util/Vector;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-36">program.imageanalysis.Photo,adaptiveThresholding,()V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-35">program.imageanalysis.Photo,plainThresholding,()V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-34">program.imageanalysis.Photo,sumBi,(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-33">program.imageanalysis.Photo,createBlankBi,(II)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-32">program.imageanalysis.Photo,createBlankBi,(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-31">program.imageanalysis.Photo,arrayToBufferedImage,([[FII)Ljava/awt/image/BufferedImage;</entry>
+<entry key="presets.cpufragment.profiler.settings.fragment.selection">program.imageanalysis.Photo,adaptiveThresholding,()V</entry>
+<entry key="presets.cpupart.profiler.settings.istrumentation.root.methods-30">program.imageanalysis.Photo,bufferedImageToArray,(Ljava/awt/image/BufferedImage;II)[[F</entry>
+</properties>
