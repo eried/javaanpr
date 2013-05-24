@@ -70,10 +70,21 @@ package javaanpr.gui;
 import java.util.Calendar;
 
 public class TimeMeter {
-    private long startTime;
+    private long startTime,endTime;
     public TimeMeter() {
-        this.startTime = Calendar.getInstance().getTimeInMillis();
+		this(0);
     }
+	public TimeMeter(long timeout) {
+        this.startTime = Calendar.getInstance().getTimeInMillis();
+		if(timeout>0)
+			this.endTime = this.startTime+timeout;
+		else
+			this.endTime = 0; 
+    }	
+	public boolean isDue() {
+		return (this.endTime == 0) ? false: Calendar.getInstance().getTimeInMillis()>endTime;
+	}
+	
     public long getTime() {
         return Calendar.getInstance().getTimeInMillis() - this.startTime;
     }
